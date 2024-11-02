@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url(./header.css);
+@import url(./error.css);
+
+:root {
+  --primary: #2c5282;
+  --secondary: #38a169;
+  --light: #ebf8ff;
+  --dark: #2d3748;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.planning-content {
+  padding: 2vh 4vw; 
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.planning-card {
+  background: white;
+  padding: 2vh 3vw; 
+  border-radius: 10px;
+  margin-bottom: 2vh; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.planning-card:hover {
+  transform: translateY(-5px);
+}
+
+.planning-card h2 {
+  font-size: 3vw; 
+  margin-bottom: 1vh; 
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .planning-content {
+    padding: 2vh 2vw; 
+  }
+
+  .header h1 {
+    font-size: 8vw; 
+  }
+
+  .planning-card h2 {
+    font-size: 4vw; 
+  }
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url(./header.css);
+@import url(./error.css);
+
+:root {
+  --primary: #2c5282;
+  --secondary: #3888a1;
+  --light: #f7fafc;
+  --dark: #2d3748;
+  --white: #ffffff;
+  --error: #e53e3e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+
+.contact-form {
+  max-width: 90vw; 
+  margin: 5vh auto; 
+  background-color: var(--white);
+  padding: 4vh; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 1vh; 
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1vh; 
+  margin-bottom: 2vh; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 1vh; 
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: var(--secondary);
+}
+
+.feedback {
+  text-align: center;
+  font-size: 1.2vw; 
+  margin-top: 2vh; 
+}
+
+.feedback.error {
+  color: var(--error);
+}
+
+.feedback.success {
+  color: var(--secondary);
+};
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+footer p {
+    margin-bottom: 0; 
+    font-weight: 600;
+    text-align: center;
+}
+
+.whatsapp-icon {
+    display: inline-block; 
+    margin-top: 0; 
+}
+
+.whatsapp-img {
+    width: 5vh; 
+    height: auto; 
+    transition: transform 0.3s; 
+    margin-top: -3vh;
+}
+
+.whatsapp-img:hover {
+    transform: scale(1.1);
+}

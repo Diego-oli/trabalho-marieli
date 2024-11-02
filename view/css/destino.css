@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url(./header.css);
+@import url(./error.css);
+
+:root {
+  --primary: #2c5282;
+  --secondary: #38a169;
+  --light: #f7fafc;
+  --dark: #2d3748;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.15);
+  --shadow-hover: rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.destinations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2vh 2vw; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.destination-card {
+  background: var(--white);
+  border-radius: 1.5vw; 
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; 
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--shadow-hover);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 25vh; 
+  object-fit: cover;
+}
+
+.destination-card img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.5)); 
+  border-radius: 1.5vw 1.5vw 0 0; 
+}
+
+.destination-card:hover img {
+  opacity: 0.85; 
+}
+
+.destination-card h2 {
+  font-size: 3vw; 
+  color: var(--primary);
+  margin: 2vh 1vw; 
+}
+
+.destination-card p {
+  margin: 0 1vw 2vh; 
+  color: var(--dark);
+  font-size: 2vw; 
+  line-height: 1.4;
+}
